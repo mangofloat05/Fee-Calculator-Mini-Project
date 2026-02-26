@@ -1,3 +1,6 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
   <Project Path="FeeCalculatorUI.csproj" Id="9fb49831-5c7c-43d1-95af-c98c63614dd6" />
 </Solution>
