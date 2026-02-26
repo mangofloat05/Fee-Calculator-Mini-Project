@@ -28,10 +28,20 @@ namespace FeeCalculatorUI
             {
                 // Formula: Fee = ROUNDUP((SURCHARGE+5)*0.045,0) + 10
                 double surcharge = Convert.ToDouble(txtSurcharge.Text);
-                double calculation = (surcharge + 5) * 0.045;
-                double fee = Math.Ceiling(calculation) + 10;
+                double plusFive = surcharge + 5;
+                double calculation = plusFive * 0.045;
+                double roundedUp = Math.Ceiling(calculation);
+                double fee = roundedUp + 10;
 
-                lblResult.Text = "Total Fee: " + fee.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-PH")); ;
+                lblResult.Text = "Fee = ((" + surcharge.ToString("0.##") + "+5)*0.045,0) + 10"
+                    + Environment.NewLine
+                    + "Fee = (" + plusFive.ToString("0.##") + "*0.045,0) + 10"
+                    + Environment.NewLine
+                    + "Fee = Rounded Off(" + calculation.ToString("0.###") + ",0) + 10"
+                    + Environment.NewLine
+                    + "Fee = " + roundedUp.ToString("0") + " + 10"
+                    + Environment.NewLine
+                    + "Total Fee: " + fee.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-PH"));
                 lblResult.ForeColor = Color.Green;
             }
             catch
@@ -42,7 +52,7 @@ namespace FeeCalculatorUI
 
         private void lblResult_Click(object sender, EventArgs e)
         {
-
+            
         }
         private void Form1_Load(object sender, EventArgs e)
         {

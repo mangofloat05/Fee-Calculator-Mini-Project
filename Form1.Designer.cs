@@ -71,10 +71,10 @@
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResult.Location = new System.Drawing.Point(325, 45);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(112, 17);
+            this.lblResult.Size = new System.Drawing.Size(85, 13);
             this.lblResult.TabIndex = 3;
             this.lblResult.Text = "Total Fee: $0.00";
             this.lblResult.Click += new System.EventHandler(this.lblResult_Click);
