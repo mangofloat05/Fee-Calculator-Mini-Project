@@ -12,6 +12,10 @@ namespace FeeCalculatorUI
 {
     public partial class SimpleCalc : Form
     {
+        private double surchargeOffset = 5;
+        private double percentageRate = 0.045;
+        private double fixedFee = 10;
+
         public SimpleCalc()
         {
             InitializeComponent();
@@ -26,20 +30,19 @@ namespace FeeCalculatorUI
         {
             try
             {
-                // Formula: Fee = ROUNDUP((SURCHARGE+5)*0.045,0) + 10
                 double surcharge = Convert.ToDouble(txtSurcharge.Text);
-                double plusFive = surcharge + 5;
-                double calculation = plusFive * 0.045;
+                double plusOffset = surcharge + surchargeOffset;
+                double calculation = plusOffset * percentageRate;
                 double roundedUp = Math.Ceiling(calculation);
-                double fee = roundedUp + 10;
+                double fee = roundedUp + fixedFee;
 
-                lblResult.Text = "Fee = ((" + surcharge.ToString("0.##") + "+5)*0.045,0) + 10"
+                lblResult.Text = "Fee = ROUNDUP((" + surcharge.ToString("0.##") + "+" + surchargeOffset.ToString("0.###") + ")*" + percentageRate.ToString("0.###") + ",0) + " + fixedFee.ToString("0.###")
                     + Environment.NewLine
-                    + "Fee = (" + plusFive.ToString("0.##") + "*0.045,0) + 10"
+                    + "Fee = ROUNDUP(" + plusOffset.ToString("0.###") + "*" + percentageRate.ToString("0.###") + ",0) + " + fixedFee.ToString("0.###")
                     + Environment.NewLine
-                    + "Fee = Rounded Off(" + calculation.ToString("0.###") + ",0) + 10"
+                    + "Fee = ROUNDUP(" + calculation.ToString("0.###") + ",0) + " + fixedFee.ToString("0.###")
                     + Environment.NewLine
-                    + "Fee = " + roundedUp.ToString("0") + " + 10"
+                    + "Fee = " + roundedUp.ToString("0") + " + " + fixedFee.ToString("0.###")
                     + Environment.NewLine
                     + "Total Fee: " + fee.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("en-PH"));
                 lblResult.ForeColor = Color.Green;
@@ -94,6 +97,69 @@ namespace FeeCalculatorUI
         private void lblArResult_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditFormula_Click(object sender, EventArgs e)
+        {
+            using (Form dialog = new Form())
+            {
+                dialog.Text = "Admin - Edit Fee Formula";
+                dialog.FormBorderStyle = FormBorderStyle.FixedDialog;
+                dialog.StartPosition = FormStartPosition.CenterParent;
+                dialog.ClientSize = new Size(340, 180);
+                dialog.MaximizeBox = false;
+                dialog.MinimizeBox = false;
+
+                Label lblOffset = new Label { Left = 15, Top = 20, Width = 200, Text = "Surcharge Offset (+X):" };
+                TextBox txtOffset = new TextBox { Left = 220, Top = 17, Width = 100, Text = surchargeOffset.ToString("0.###") };
+
+                Label lblRate = new Label { Left = 15, Top = 55, Width = 200, Text = "Percentage Rate (*Y):" };
+                TextBox txtRate = new TextBox { Left = 220, Top = 52, Width = 100, Text = percentageRate.ToString("0.###") };
+
+                Label lblFixed = new Label { Left = 15, Top = 90, Width = 200, Text = "Fixed Fee (+Z):" };
+                TextBox txtFixed = new TextBox { Left = 220, Top = 87, Width = 100, Text = fixedFee.ToString("0.###") };
+
+                Button btnSave = new Button { Text = "Save", Left = 164, Width = 75, Top = 130, DialogResult = DialogResult.OK };
+                Button btnCancel = new Button { Text = "Cancel", Left = 245, Width = 75, Top = 130, DialogResult = DialogResult.Cancel };
+
+                dialog.Controls.Add(lblOffset);
+                dialog.Controls.Add(txtOffset);
+                dialog.Controls.Add(lblRate);
+                dialog.Controls.Add(txtRate);
+                dialog.Controls.Add(lblFixed);
+                dialog.Controls.Add(txtFixed);
+                dialog.Controls.Add(btnSave);
+                dialog.Controls.Add(btnCancel);
+
+                dialog.AcceptButton = btnSave;
+                dialog.CancelButton = btnCancel;
+
+                if (dialog.ShowDialog(this) == DialogResult.OK)
+                {
+                    double newOffset;
+                    double newRate;
+                    double newFixed;
+
+                    if (!double.TryParse(txtOffset.Text, out newOffset) ||
+                        !double.TryParse(txtRate.Text, out newRate) ||
+                        !double.TryParse(txtFixed.Text, out newFixed))
+                    {
+                        MessageBox.Show("Please enter valid numeric values for formula settings.");
+                        return;
+                    }
+
+                    surchargeOffset = newOffset;
+                    percentageRate = newRate;
+                    fixedFee = newFixed;
+
+                    MessageBox.Show("Fee formula updated successfully.");
+                }
+            }
         }
     }
 }

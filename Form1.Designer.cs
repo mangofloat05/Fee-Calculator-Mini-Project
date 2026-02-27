@@ -38,6 +38,7 @@
             this.txtServiceFee = new System.Windows.Forms.TextBox();
             this.lblArResult = new System.Windows.Forms.Label();
             this.btnCalculateAR = new System.Windows.Forms.Button();
+            this.btnEditFormula = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtSurcharge
@@ -72,7 +73,7 @@
             // 
             this.lblResult.AutoSize = true;
             this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult.Location = new System.Drawing.Point(325, 45);
+            this.lblResult.Location = new System.Drawing.Point(325, 43);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(85, 13);
             this.lblResult.TabIndex = 3;
@@ -87,6 +88,7 @@
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Ticket Total";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -134,12 +136,23 @@
             this.btnCalculateAR.UseVisualStyleBackColor = true;
             this.btnCalculateAR.Click += new System.EventHandler(this.btnCalculateAR_Click);
             // 
+            // btnEditFormula
+            // 
+            this.btnEditFormula.Location = new System.Drawing.Point(476, 12);
+            this.btnEditFormula.Name = "btnEditFormula";
+            this.btnEditFormula.Size = new System.Drawing.Size(121, 23);
+            this.btnEditFormula.TabIndex = 10;
+            this.btnEditFormula.Text = "Admin: Edit Formula";
+            this.btnEditFormula.UseVisualStyleBackColor = true;
+            this.btnEditFormula.Click += new System.EventHandler(this.btnEditFormula_Click);
+            // 
             // SimpleCalc
             // 
             this.AcceptButton = this.btnCalculate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 216);
+            this.ClientSize = new System.Drawing.Size(609, 227);
+            this.Controls.Add(this.btnEditFormula);
             this.Controls.Add(this.btnCalculateAR);
             this.Controls.Add(this.lblArResult);
             this.Controls.Add(this.txtServiceFee);
@@ -171,6 +184,7 @@
         private System.Windows.Forms.TextBox txtServiceFee;
         private System.Windows.Forms.Label lblArResult;
         private System.Windows.Forms.Button btnCalculateAR;
+        private System.Windows.Forms.Button btnEditFormula;
     }
 }
 
