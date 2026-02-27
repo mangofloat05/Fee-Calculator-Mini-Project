@@ -22,6 +22,9 @@ A C# Windows Forms application designed to automate fee computations
 2. Press **F5** or the **Start** button.
 3. Enter the required amounts and press **Enter** or click **Calculate**.
 
+## Added Functionality
+* Admin Edit has been added!
+    * Admin can now edit the Surcharge Fee by parts, separated into 3: "X". "Y", & "Z" sections of the formula.
 
 Video Link for Presentation:
 [To be added soon]
