@@ -144,6 +144,7 @@
             this.btnEditFormula.TabIndex = 10;
             this.btnEditFormula.Text = "Admin: Edit Formula";
             this.btnEditFormula.UseVisualStyleBackColor = true;
+            this.btnEditFormula.Visible = false;
             this.btnEditFormula.Click += new System.EventHandler(this.btnEditFormula_Click);
             // 
             // SimpleCalc

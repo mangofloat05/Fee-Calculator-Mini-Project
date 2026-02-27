@@ -36,11 +36,11 @@ namespace FeeCalculatorUI
                 double roundedUp = Math.Ceiling(calculation);
                 double fee = roundedUp + fixedFee;
 
-                lblResult.Text = "Fee = ROUNDUP((" + surcharge.ToString("0.##") + "+" + surchargeOffset.ToString("0.###") + ")*" + percentageRate.ToString("0.###") + ",0) + " + fixedFee.ToString("0.###")
+                lblResult.Text = "Fee = ROUNDUP((" + surcharge.ToString("0.##") + "+" + surchargeOffset.ToString("0.###") + ")*" + percentageRate.ToString("0.###") + ") + " + fixedFee.ToString("0.###")
                     + Environment.NewLine
-                    + "Fee = ROUNDUP(" + plusOffset.ToString("0.###") + "*" + percentageRate.ToString("0.###") + ",0) + " + fixedFee.ToString("0.###")
+                    + "Fee = ROUNDUP(" + plusOffset.ToString("0.###") + "*" + percentageRate.ToString("0.###") + ") + " + fixedFee.ToString("0.###")
                     + Environment.NewLine
-                    + "Fee = ROUNDUP(" + calculation.ToString("0.###") + ",0) + " + fixedFee.ToString("0.###")
+                    + "Fee = ROUNDUP(" + calculation.ToString("0.###") + ") + " + fixedFee.ToString("0.###")
                     + Environment.NewLine
                     + "Fee = " + roundedUp.ToString("0") + " + " + fixedFee.ToString("0.###")
                     + Environment.NewLine
@@ -160,6 +160,15 @@ namespace FeeCalculatorUI
                     MessageBox.Show("Fee formula updated successfully.");
                 }
             }
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.Shift | Keys.A)) // Ctrl+Shift+A for Admin
+            {
+                btnEditFormula.Visible = !btnEditFormula.Visible;
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

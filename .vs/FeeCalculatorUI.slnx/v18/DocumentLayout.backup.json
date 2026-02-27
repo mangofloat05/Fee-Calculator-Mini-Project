@@ -22,8 +22,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Stryz_Axist\\Documents\\GitHub\\Fee-Calculator-Mini-Project\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Stryz_Axist\\Documents\\GitHub\\Fee-Calculator-Mini-Project\\Form1.cs*",
+              "RelativeToolTip": "Form1.cs*",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAewKsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T12:20:39.867Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -36,22 +50,9 @@
               "RelativeDocumentMoniker": "Form1.Designer.cs",
               "ToolTip": "C:\\Users\\Stryz_Axist\\Documents\\GitHub\\Fee-Calculator-Mini-Project\\Form1.Designer.cs",
               "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T00:42:41.214Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Stryz_Axist\\Documents\\GitHub\\Fee-Calculator-Mini-Project\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Stryz_Axist\\Documents\\GitHub\\Fee-Calculator-Mini-Project\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T12:20:39.867Z",
+              "WhenOpened": "2026-02-27T01:35:23.144Z",
               "EditorCaption": ""
             },
             {
@@ -60,8 +61,8 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Stryz_Axist\\Documents\\GitHub\\Fee-Calculator-Mini-Project\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Stryz_Axist\\Documents\\GitHub\\Fee-Calculator-Mini-Project\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\Stryz_Axist\\Documents\\GitHub\\Fee-Calculator-Mini-Project\\Form1.cs [Design]*",
+              "RelativeToolTip": "Form1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-26T12:20:37.657Z",
               "EditorCaption": " [Design]"
