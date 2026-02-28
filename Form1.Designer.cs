@@ -43,49 +43,60 @@
             // 
             // txtSurcharge
             // 
-            this.txtSurcharge.Location = new System.Drawing.Point(37, 46);
+            this.txtSurcharge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSurcharge.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtSurcharge.Location = new System.Drawing.Point(36, 56);
             this.txtSurcharge.Name = "txtSurcharge";
-            this.txtSurcharge.Size = new System.Drawing.Size(100, 20);
+            this.txtSurcharge.Size = new System.Drawing.Size(220, 25);
             this.txtSurcharge.TabIndex = 0;
             this.txtSurcharge.TextChanged += new System.EventHandler(this.txtSurcharge_change);
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(143, 43);
+            this.btnCalculate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.btnCalculate.FlatAppearance.BorderSize = 0;
+            this.btnCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalculate.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCalculate.ForeColor = System.Drawing.Color.White;
+            this.btnCalculate.Location = new System.Drawing.Point(36, 91);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(121, 23);
+            this.btnCalculate.Size = new System.Drawing.Size(220, 34);
             this.btnCalculate.TabIndex = 1;
-            this.btnCalculate.Text = "Calculate Fee\r\n";
-            this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Text = "Calculate Fee";
+            this.btnCalculate.UseVisualStyleBackColor = false;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 30);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(34, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Enter Surcharge";
+            this.label1.Text = "Surcharge";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblResult
             // 
-            this.lblResult.AutoSize = true;
-            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult.Location = new System.Drawing.Point(325, 43);
+            this.lblResult.BackColor = System.Drawing.Color.White;
+            this.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblResult.Font = new System.Drawing.Font("Consolas", 9F);
+            this.lblResult.Location = new System.Drawing.Point(287, 35);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(85, 13);
+            this.lblResult.Padding = new System.Windows.Forms.Padding(8);
+            this.lblResult.Size = new System.Drawing.Size(300, 130);
             this.lblResult.TabIndex = 3;
-            this.lblResult.Text = "Total Fee: $0.00";
+            this.lblResult.Text = "Fee breakdown will appear here.";
             this.lblResult.Click += new System.EventHandler(this.lblResult_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 90);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(34, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(67, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Ticket Total";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -93,57 +104,74 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 129);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(34, 200);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 13);
+            this.label3.Size = new System.Drawing.Size(119, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Payment Service Fee";
             // 
             // txtTicketTotal
             // 
-            this.txtTicketTotal.Location = new System.Drawing.Point(37, 106);
+            this.txtTicketTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTicketTotal.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtTicketTotal.Location = new System.Drawing.Point(36, 166);
             this.txtTicketTotal.Name = "txtTicketTotal";
-            this.txtTicketTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTicketTotal.Size = new System.Drawing.Size(220, 25);
             this.txtTicketTotal.TabIndex = 6;
             this.txtTicketTotal.TextChanged += new System.EventHandler(this.txtTicketTotal_TextChanged);
             // 
             // txtServiceFee
             // 
-            this.txtServiceFee.Location = new System.Drawing.Point(37, 148);
+            this.txtServiceFee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtServiceFee.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtServiceFee.Location = new System.Drawing.Point(36, 221);
             this.txtServiceFee.Name = "txtServiceFee";
-            this.txtServiceFee.Size = new System.Drawing.Size(100, 20);
+            this.txtServiceFee.Size = new System.Drawing.Size(220, 25);
             this.txtServiceFee.TabIndex = 7;
             this.txtServiceFee.TextChanged += new System.EventHandler(this.txtServiceFee_TextChanged);
             // 
             // lblArResult
             // 
-            this.lblArResult.AutoSize = true;
-            this.lblArResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.lblArResult.Location = new System.Drawing.Point(325, 180);
+            this.lblArResult.BackColor = System.Drawing.Color.White;
+            this.lblArResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblArResult.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblArResult.Location = new System.Drawing.Point(287, 180);
             this.lblArResult.Name = "lblArResult";
-            this.lblArResult.Size = new System.Drawing.Size(82, 17);
+            this.lblArResult.Padding = new System.Windows.Forms.Padding(8);
+            this.lblArResult.Size = new System.Drawing.Size(300, 66);
             this.lblArResult.TabIndex = 8;
-            this.lblArResult.Text = "AR amount:";
+            this.lblArResult.Text = "AR Amount: ₱0.00";
             this.lblArResult.Click += new System.EventHandler(this.lblArResult_Click);
             // 
             // btnCalculateAR
             // 
-            this.btnCalculateAR.Location = new System.Drawing.Point(37, 175);
+            this.btnCalculateAR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnCalculateAR.FlatAppearance.BorderSize = 0;
+            this.btnCalculateAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalculateAR.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCalculateAR.ForeColor = System.Drawing.Color.White;
+            this.btnCalculateAR.Location = new System.Drawing.Point(36, 258);
             this.btnCalculateAR.Name = "btnCalculateAR";
-            this.btnCalculateAR.Size = new System.Drawing.Size(130, 23);
+            this.btnCalculateAR.Size = new System.Drawing.Size(220, 34);
             this.btnCalculateAR.TabIndex = 9;
             this.btnCalculateAR.Text = "Calculate AR amount";
-            this.btnCalculateAR.UseVisualStyleBackColor = true;
+            this.btnCalculateAR.UseVisualStyleBackColor = false;
             this.btnCalculateAR.Click += new System.EventHandler(this.btnCalculateAR_Click);
             // 
             // btnEditFormula
             // 
-            this.btnEditFormula.Location = new System.Drawing.Point(476, 12);
+            this.btnEditFormula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.btnEditFormula.FlatAppearance.BorderSize = 0;
+            this.btnEditFormula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditFormula.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnEditFormula.ForeColor = System.Drawing.Color.White;
+            this.btnEditFormula.Location = new System.Drawing.Point(461, 5);
             this.btnEditFormula.Name = "btnEditFormula";
-            this.btnEditFormula.Size = new System.Drawing.Size(121, 23);
+            this.btnEditFormula.Size = new System.Drawing.Size(126, 24);
             this.btnEditFormula.TabIndex = 10;
             this.btnEditFormula.Text = "Admin: Edit Formula";
-            this.btnEditFormula.UseVisualStyleBackColor = true;
+            this.btnEditFormula.UseVisualStyleBackColor = false;
             this.btnEditFormula.Visible = false;
             this.btnEditFormula.Click += new System.EventHandler(this.btnEditFormula_Click);
             // 
@@ -152,7 +180,9 @@
             this.AcceptButton = this.btnCalculate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 227);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.ClientSize = new System.Drawing.Size(624, 314);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Controls.Add(this.btnEditFormula);
             this.Controls.Add(this.btnCalculateAR);
             this.Controls.Add(this.lblArResult);
@@ -165,7 +195,9 @@
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.txtSurcharge);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "SimpleCalc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Barkota Fee Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

@@ -1,6 +1,5 @@
 # Fee-Calculator-Mini-Project
 This is a Mini Project meant for checking
-Since I am unable to sign in to GitLab as of now, this will be where I will submit my output.
 
 Video Documentation will follow through a Google Drive Link in Google Chat.
 

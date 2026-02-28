@@ -18,3 +18,4 @@ C:\Users\Stryz_Axist\Documents\GitHub\Fee-Calculator-Mini-Project\obj\Debug\FeeC
 C:\Users\Stryz_Axist\Documents\GitHub\Fee-Calculator-Mini-Project\obj\Debug\FeeCalculatorUI.csproj.CoreCompileInputs.cache
 C:\Users\Stryz_Axist\Documents\GitHub\Fee-Calculator-Mini-Project\obj\Debug\FeeCalculatorUI.exe
 C:\Users\Stryz_Axist\Documents\GitHub\Fee-Calculator-Mini-Project\obj\Debug\FeeCalculatorUI.pdb
+C:\Users\Stryz_Axist\Documents\GitHub\Fee-Calculator-Mini-Project\obj\Debug\FeeCalculatorUI.AdminFormulaForm.resources
