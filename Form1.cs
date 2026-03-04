@@ -21,15 +21,12 @@ namespace FeeCalculatorUI
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             try
             {
+                // Formula: Fee = ROUNDUP((Surcharge + Surcharge Offset) * Percentage Rate) + Fixed Fee
+                // Example: If Surcharge = 100, Surcharge Offset = 5, Percentage Rate = 0.045, Fixed Fee = 10
                 double surcharge = Convert.ToDouble(txtSurcharge.Text);
                 double plusOffset = surcharge + surchargeOffset;
                 double calculation = plusOffset * percentageRate;
@@ -53,18 +50,6 @@ namespace FeeCalculatorUI
             }
         }
 
-        private void lblResult_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void txtSurcharge_change(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnCalculateAR_Click(object sender, EventArgs e)
         {
@@ -84,26 +69,6 @@ namespace FeeCalculatorUI
             }
         }
 
-        private void txtTicketTotal_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtServiceFee_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblArResult_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEditFormula_Click(object sender, EventArgs e)
         {
             using (var dialog = new AdminFormulaForm(surchargeOffset, percentageRate, fixedFee))
@@ -121,7 +86,7 @@ namespace FeeCalculatorUI
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (keyData == (Keys.Control | Keys.Shift | Keys.A)) // Ctrl+Shift+A for Admin
+            if (keyData == (Keys.Control | Keys.Shift | Keys.Tab)) // Ctrl+Shift+A for Admin
             {
                 btnEditFormula.Visible = !btnEditFormula.Visible;
                 return true;
@@ -129,5 +94,4 @@ namespace FeeCalculatorUI
             return base.ProcessCmdKey(ref msg, keyData);
         }
     }
-
 }
